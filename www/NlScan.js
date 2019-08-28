@@ -22,7 +22,7 @@ NlScan.prototype.init = function (successCallback, failureCallback) {
     cordova.exec(
         successCallback,
         failureCallback,
-        'BarcodeScanner', 'init', []);
+        'NlScan', 'init', []);
 };
 
 /**
@@ -35,7 +35,7 @@ NlScan.prototype.scan = function (successCallback, failureCallback) {
     cordova.exec(
         successCallback,
         failureCallback,
-        'BarcodeScanner', 'scan', []);
+        'NlScan', 'scan', []);
 };
 
 /**
@@ -45,7 +45,7 @@ NlScan.prototype.scan = function (successCallback, failureCallback) {
  * @param errorCallback well never be called
  */
 NlScan.prototype.destroy = function(successCallback,failureCallback) {
-	cordova.exec(successCallback, failureCallback, 'BarcodeScanner', 'destroy', []);
+	cordova.exec(successCallback, failureCallback, 'NlScan', 'destroy', []);
 };
 
 /**
@@ -56,7 +56,7 @@ NlScan.prototype.destroy = function(successCallback,failureCallback) {
  *
  */
 NlScan.prototype.getState = function(successCallback,failureCallback) {
-		 cordova.exec(successCallback, failureCallback, 'BarcodeScanner', 'getState', []);
+		 cordova.exec(successCallback, failureCallback, 'NlScan', 'getState', []);
 };
 
 /**
@@ -67,7 +67,7 @@ NlScan.prototype.getState = function(successCallback,failureCallback) {
  * @param errorCallback asynchronous function to be called when there was a problem while reading
  */
 NlScan.prototype.read = function(successCallback,failureCallback) {
-	 cordova.exec(successCallback, failureCallback, 'BarcodeScanner', 'read', []);
+	 cordova.exec(successCallback, failureCallback, 'NlScan', 'read', []);
 };
 
 /**
@@ -80,8 +80,8 @@ NlScan.prototype.read = function(successCallback,failureCallback) {
  * @param para String with required scanSetting
  */
 NlScan.prototype.scanSetting = function(successCallback, failureCallback, para) {
-		 cordova.exec(successCallback, failureCallback, 'BarcodeScanner', 'scanSetting', para);
+		 cordova.exec(successCallback, failureCallback, 'NlScan', 'scanSetting', para);
 };
 
-var NlScan = new NlScan();
-module.exports = NlScan;
+var nlScan = new NlScan();
+module.exports = nlScan;

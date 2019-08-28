@@ -1,4 +1,4 @@
-package com.nlscan.cordova.plugin.barcodescanner;
+package com.nlscan.cordova.plugin.newlandscanner;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -23,7 +23,7 @@ import org.json.JSONObject;
  *@company nlscan
  *@describe Cordova plugin to interface with NLSCAN barcode scanners.
  **/
-public class BarcodeScanner extends CordovaPlugin {
+public class NlScan extends CordovaPlugin {
 
     // Debugging
     private static final String TAG = "NlScan";
@@ -33,7 +33,7 @@ public class BarcodeScanner extends CordovaPlugin {
     private static final String SCANNER_RESULT = "nlscan.action.SCANNER_RESULT";
     private static final String SCANNER_TRIG = "nlscan.action.SCANNER_TRIG";
     private static final String ACTION_BAR_SCANCFG = "ACTION_BAR_SCANCFG";
-    private static final String Tag = "BarcodeScannerTag";
+    private static final String Tag = "NlScanTag";
     private static boolean registeredTag = false;
     private Activity activity;
 
@@ -62,7 +62,7 @@ public class BarcodeScanner extends CordovaPlugin {
     /**
      * Create a BCR reader
      */
-    public BarcodeScanner() {
+    public NlScan() {
         this.setState(STATE_NONE);
     }
 
