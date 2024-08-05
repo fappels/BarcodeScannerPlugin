@@ -16,6 +16,7 @@ import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import android.os.Build;
 
 /**
  *@date 20190822
@@ -79,7 +80,11 @@ public class NlScan extends CordovaPlugin {
         // init BCR receiver
         mReceiver = new BCRBroadcastReceiver();
         IntentFilter intFilter = new IntentFilter(SCANNER_RESULT);
-        this.activity.registerReceiver(mReceiver, intFilter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            this.activity.registerReceiver(mReceiver, intFilter, Context.RECEIVER_EXPORTED);
+        } else {
+            this.activity.registerReceiver(mReceiver, intFilter);
+        }
         registeredTag = true;
     }
 

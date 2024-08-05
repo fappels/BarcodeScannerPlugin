@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin xmlns:android="http://schemas.android.com/apk/res/android"
-    id="nlscan-plugin-newlandscanner" version="0.0.1"
+    id="nlscan-plugin-newlandscanner" version="0.0.2"
     xmlns="http://apache.org/cordova/ns/plugins/1.0">
     <name>NlScan</name>
     <description>Cordova plugin to interface with NLSCAN barcode scanners (on Android)</description>
